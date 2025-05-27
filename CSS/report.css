@@ -1,0 +1,23 @@
+body {
+  background-color: #f8f9fa;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.text-main {
+  color: #09906F;
+}
+
+.btn-main {
+  background-color: #09906F;
+  color: white;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  background-color: #077d60;
+}
+
+.custom-navbar {
+  background-color: #09906F;
+}
