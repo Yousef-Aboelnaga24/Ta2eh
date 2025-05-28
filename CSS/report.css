@@ -10,7 +10,6 @@ body {
 .btn-main {
   background-color: #09906F;
   color: white;
-  border: none;
   transition: all 0.3s ease;
 }
 

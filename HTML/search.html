@@ -19,24 +19,33 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navContent">
-                <ul class="d-flex justify-contact-center navbar-nav ms-auto">
+                <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link active" href="../index.html">الرئيسية</a></li>
                     <li class="nav-item"><a class="nav-link" href="./add.html">بلاغ جديد</a></li>
                     <li class="nav-item"><a class="nav-link" href="#">تواصل معنا</a></li>
                 </ul>
             </div>
             <form class="d-flex ms-auto my-2">
-                <input class="form-control me-sm-2" type="text" placeholder="Search" />
-                <button class="btn btn-outline-light my-2 my-sm-0" type="submit">
-                    Search
-                </button>
+                <input id="searchInput" class="form-control me-sm-2" type="text"
+                    placeholder="ابحث بالاسم أو المحافظة" />
+                <button class="btn btn-outline-light my-2 my-sm-0">بحث</button>
             </form>
+
         </div>
     </nav>
 
-
+    <section>
+        <div class="container text-center my-4">
+            <h2 class="section-title fs-2 text-success fw-bold mb-3">قائمة المفقودين</h2>
+            <div id="missingList" class="row g-4">
+                <!-- Cards -->
+            </div>
+        </div>
+    </section>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../JS/add.js"></script>
+    <script src="../JS/search.js"></script>
 </body>
 
 </html>
