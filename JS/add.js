@@ -67,7 +67,12 @@ buttonMain.addEventListener("click", (e) => {
     window.location.href = "search.html";
   }, 2000);
 });
-// function viewDetails(person) {
-//   localStorage.setItem("selectedPerson", JSON.stringify(person));
-//   window.location.href = "details.html";
-// }
+
+function letterOnly(input) {
+  let regex = /[^a-z أ-ي]/gi
+  input.value = input.value.replace(regex, "");
+}
+function numberOnly(input) {
+  let regex = /[^0-9]/g
+  input.value = input.value.replace(regex, "");
+}

@@ -6,15 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>تائه - منصة المفقودين</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.rtl.min.css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />>
     <link rel="stylesheet" href="./CSS/Mainstyle.css" />
     <link rel="stylesheet" href="./CSS/forAll.css">
 </head>
 
 <body>
-
     <header id="head">
         <!-- Navbar -->
-        <nav class="navbar navbar-expand-lg">
+        <nav class="navbar navbar-expand-lg fixed-top">
             <div class="container">
                 <a class="navbar-brand" href="#">
                     <img src="./Image/logo.png" alt="شعار" class="logo" />
@@ -23,11 +23,37 @@
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navContent">
-                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item"><a class="nav-link active" href="#">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./HTML/add.html">بلاغ جديد</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./HTML/search.html">المفقودين</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">تواصل معانا</a></li>
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="#head">
+                                <i class="fa fa-home"></i>
+                                الرئيسية
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./HTML/add.html">
+                                <i class="fas fa-exclamation-circle"></i>
+                                بلاغ جديد
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="./HTML/missing.html">
+                                <i class="fas fa-address-card"></i>
+                                المفقودين
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contact">
+                                <i class="fa fa-envelope"></i>
+                                تواصل معنا
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a href="./HTML/aboutUs.html" class="nav-link">
+                                <i class="fas fa-users"></i>
+                                من نحن
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </div>
@@ -39,198 +65,191 @@
                 <h1 class="text-white fw-bold display-5 mb-3">مرحباً بك في منصة "تائه"</h1>
                 <p class="fs-5">منصة إنسانية تساعدك في الإبلاغ والبحث عن الأطفال المفقودين وكبار السن التائهين بكل سهولة
                     وسرعة.</p>
-                <a href="./HTML/add.html" class="btn btn-light btn-lg mt-3">قدّم بلاغ الآن</a>
+
+                <!-- البديل المقترح -->
+                <p class="fs-5 mt-3">🚨 عدد البلاغات <span class="fw-bold">0</span> بلاغ حتى الآن عبر المنصة.</p>
+                <div class="d-flex justify-content-center gap-3 mt-3">
+                    <a href="#report-section" class="btn btn-outline-light px-4 rounded-pill">أبلغ عن مفقود</a>
+                    <a href="./HTML/missing.html" class="btn btn-outline-light px-4 rounded-pill">ابحث عن شخص</a>
+                </div>
             </div>
         </section>
+
     </header>
     <!-- ✅ بلاغ جديد -->
-    <section class="container py-5 text-center">
-        <h2 class="mb-4">هل رأيت شخصاً تائهاً؟</h2>
-        <p class="mb-4">ساهم بمعلومة قد تكون سبباً في إنقاذ أحد المفقودين. كل معلومة مهما كانت صغيرة قد تُحدث فرقاً
-            كبيراً.</p>
-        <a href="./HTML/add.html" class="btn btn-success px-4 py-2">قدّم بلاغ جديد</a>
+    <section id="report-section" class="py-5 bg-light">
+        <div class="container">
+            <div class="row align-items-center g-4">
+
+                <!-- ✅ صورة توضيحية -->
+                <div class="col-md-6 text-center">
+                    <img src="./Image/cute bunny.jpeg" alt="تبليغ عن مفقود" class="img-fluid rounded-4 shadow"
+                        style="max-height: 350px;">
+                </div>
+
+                <!-- ✅ نص محفز وزر -->
+                <div class="col-md-6 text-center text-md-start">
+                    <h2 class="fw-bold mb-3 text-success">هل رأيت شخصاً تائهاً؟</h2>
+                    <p class="mb-4 fs-5 text-muted">
+                        ساهم في إعادة المفقودين إلى أسرهم. كل معلومة قد تصنع الفارق.
+                        شارك ببلاغك الآن وساعد في إنقاذ حياة.
+                    </p>
+                    <a href="./HTML/add.html" class="btn btn-success btn-lg px-4 py-2 rounded-pill">
+                        قدّم بلاغ الآن
+                        <i class="fas fa-external-link-alt ms-2"></i>
+                    </a>
+                </div>
+
+            </div>
+        </div>
     </section>
 
-    <section class="missing-section py-4">
-        <h2 class="section-title mb-5 text-center">المفقودين</h2>
+
+    <section class="missing-section py-5 bg-white">
         <div class="container">
+            <h2 class="mb-5 text-center text-success fw-bold">
+                <i class="fas fa-users me-2"></i> المفقودين
+            </h2>
+
             <div class="row g-4">
+
                 <!-- 🟩 كارت 1 -->
                 <div class="col-md-4">
-                    <div class="card missing-card shadow">
-                        <img src="./Image/istockphoto-1134393173-612x612.webp"
-                            class="card-img-top" alt="شخص مفقود">
+                    <div class="card missing-card shadow-sm border-0 h-100 transition">
+                        <img src="./Image/istockphoto-1134393173-612x612.webp" class="card-img-top" alt="شخص مفقود">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold fs-4">أحمد محمد</h5>
-                            <p class="card-text">العمر: 12 سنة</p>
-                            <p class="card-text">المدينة: القاهرة</p>
-                            <a href="#" class="btn btn-outline-success rounded-pill">تفاصيل أكثر</a>
+                            <h5 class="card-title fw-bold fs-4 text-dark">
+                                <i class="fas fa-user-circle me-1 text-success"></i> أحمد محمد
+                            </h5>
+                            <p class="card-text"><i class="fas fa-birthday-cake me-1 text-muted"></i> العمر: 12 سنة</p>
+                            <p class="card-text"><i class="fas fa-map-marker-alt me-1 text-muted"></i> المدينة: القاهرة
+                            </p>
+                            <button class="btn btn-outline-success rounded-pill mt-2">تفاصيل أكثر</button>
                         </div>
                     </div>
                 </div>
 
                 <!-- 🟩 كارت 2 -->
                 <div class="col-md-4">
-                    <div class="card missing-card shadow-sm">
-                        <img src="./Image/child walking down a road.jpeg.jpg"
-                            class="card-img-top" alt="شخص مفقود">
+                    <div class="card missing-card shadow-sm border-0 h-100 transition">
+                        <img src="./Image/child walking down a road.jpeg.jpg" class="card-img-top" alt="شخص مفقود">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold fs-4">سارة علي</h5>
-                            <p class="card-text">العمر: 8 سنوات</p>
-                            <p class="card-text">المدينة: الجيزة</p>
-                            <a href="#" class="btn btn-outline-success rounded-pill">تفاصيل أكثر</a>
+                            <h5 class="card-title fw-bold fs-4 text-dark">
+                                <i class="bi bi-person-circle me-1 text-success"></i> سارة علي
+                            </h5>
+                            <p class="card-text"><i class="bi bi-cake me-1 text-muted"></i> العمر: 8 سنوات</p>
+                            <p class="card-text"><i class="bi bi-geo-alt me-1 text-muted"></i> المدينة: الجيزة</p>
+                            <a href="#" class="btn btn-outline-success rounded-pill mt-2">تفاصيل أكثر</a>
                         </div>
                     </div>
                 </div>
 
                 <!-- 🟩 كارت 3 -->
                 <div class="col-md-4">
-                    <div class="card missing-card shadow-sm">
-                        <img src="./Image/progress passawish.jpeg.jpg"
-                            class="card-img-top" alt="شخص مفقود">
+                    <div class="card missing-card shadow-sm border-0 h-100 transition">
+                        <img src="./Image/progress passawish.jpeg.jpg" class="card-img-top" alt="شخص مفقود">
                         <div class="card-body text-center">
-                            <h5 class="card-title fw-bold fs-4">محمود حسن</h5>
-                            <p class="card-text">العمر: 65 سنة</p>
-                            <p class="card-text">المدينة: الإسكندرية</p>
-                            <a href="#" class="btn btn-outline-success rounded-pill">تفاصيل أكثر</a>
+                            <h5 class="card-title fw-bold fs-4 text-dark">
+                                <i class="bi bi-person-circle me-1 text-success"></i> محمود حسن
+                            </h5>
+                            <p class="card-text"><i class="fa fa-hourglass-half me-1 text-muted"></i> العمر: 65 سنة</p>
+                            <p class="card-text"><i class="bi bi-geo-alt me-1 text-muted"></i> المدينة: الإسكندرية</p>
+                            <a href="#" class="btn btn-outline-success rounded-pill mt-2">تفاصيل أكثر</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- 🔘 زر للذهاب إلى القائمة -->
             <div class="text-center mt-5">
-                <a href="./HTML/search.html" class="btn btn-success btn-lg px-5 rounded-pill">الذهاب إلى قائمة
-                    المفقودين</a>
+                <a href="./HTML/missing.html" class="btn btn-success btn-lg px-5 rounded-pill">
+                    <i class="fas fa-list-ul me-1"></i> الذهاب إلى قائمة المفقودين
+                </a>
             </div>
         </div>
     </section>
 
+    <!-- Footer -->
+    <footer class="text-white pt-5 pb-4" style="background-color:#074c3a;"> <!-- خلفية أغمق -->
+        <div class="container text-md-start">
+            <div class="row text-md-start">
 
-    <!-- ✅ قصص النجاح -->
-    <!-- <section class="container py-5 text-center">
-        <h2 class="mb-4">قصص النجاح</h2>
-        <div class="row g-4">
-            <div class="col-md-4">
-                <div class="card success-card">
-                    <img src="./Image/In the Crowd_LE_upscale_balanced_x4 (1).jpg" alt="صورة المختطف">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold fs-4">عودة الطفل سامي</h5>
-                        <p class="card-text">تم العثور عليه بعد 3 أيام من البلاغ بفضل جهود الأهالي والمنصة.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card success-card">
-                    <img src="./Image/In the Crowd_LE_upscale_balanced_x4 (1).jpg" alt="صورة المختطف">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold fs-4">عودة الطفل سامي</h5>
-                        <p class="card-text">تم العثور عليه بعد 3 أيام من البلاغ بفضل جهود الأهالي والمنصة.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card success-card">
-                    <img src="./Image/In the Crowd_LE_upscale_balanced_x4 (1).jpg" alt="صورة المختطف">
-                    <div class="card-body">
-                        <h5 class="card-title fw-bold fs-4">عودة الطفل سامي</h5>
-                        <p class="card-text">تم العثور عليه بعد 3 أيام من البلاغ بفضل جهود الأهالي والمنصة.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section> -->
-
-    <!-- ✅ تواصل معنا -->
-    <section id="contact" class="py-5">
-        <h2 class="section-title text-center mb-5">تواصل معانا</h2>
-        <div class="container">
-            <div class="row">
-                <div class="col">
-                    <p class="mb-3">نحن هنا للإجابة على استفساراتك وتقديم الدعم اللازم لك.</p>
-                    <p>📧 البريد الإلكتروني: support@taeh.com</p>
-                </div>
-                <div class="col">
-                    <form action="">
-                        <div class="form-floating mb-3">
-                            <input type="text" class="form-control" name="formId1" id="formId1" placeholder="" />
-                            <label for="formId1">الأسم</label>
-                        </div>
-                        <div class="form-floating mb-3">
-                            <input type="email" class="form-control" name="formId1" id="formId2" placeholder="" />
-                            <label for="formId2">البريد الإلكتروني</label>
-                        </div>
-                        <div class="mb-3">
-                            <textarea class="form-control" id="" placeholder="رسالتك" rows="3"></textarea>
-                        </div>
-                        <div class="mb-3">
-                            <button class="btn btn-success">إرسال</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ✅ Footer المتقدم -->
-    <footer class="footer-advanced mt-5 pt-5 pb-4 text-center text-md-start bg-light border-top">
-        <div class="container">
-            <div class="row gy-4">
-
-                <!-- فكرتنا -->
-                <div class="col-md-3">
-                    <h5 class="fw-bold mb-3">فكرتنا</h5>
-                    <p class="small">منصة إنسانية متخصصة في الإبلاغ والمساعدة في إيجاد الأطفال المفقودين وكبار السن
-                        التائهين. نهدف إلى إنشاء مجتمع متعاون للمساعدة في لم الشمل.</p>
-                    <div class="d-flex gap-2 justify-content-center justify-content-md-start">
-                        <a href="#" class="text-primary fs-5"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="text-danger fs-5"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="text-dark fs-5"><i class="bi bi-envelope"></i></a>
-                    </div>
+                <!-- القسم الأول: نبذة عن الموقع -->
+                <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
+                    <h4 class="fw-bold mb-3" style="color:#43d9a0; letter-spacing: 1.2px;">تائه</h4>
+                    <p style="color:#d4f0e2; font-size: 15px; line-height: 1.6; max-width: 320px;">
+                        "تائه" هو موقع يهتم بمساعدتك على إيجاد طريقك بين بحر المعلومات الضخم.
+                        نوفّر لك محتوى دقيق، واضح، ومصمم خصيصاً ليجعل تجربتك أسهل وأفضل.
+                        انضم لنا واكتشف كيف يمكنك أن تكون دائماً على الطريق الصحيح.
+                    </p>
                 </div>
 
-                <!-- خريطة الموقع -->
-                <div class="col-md-3">
-                    <h5 class="fw-bold mb-3">خريطة الموقع</h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="#head" class="text-dark text-decoration-none">الرئيسية</a></li>
-                        <li><a href="./HTML/add.html" class="text-dark text-decoration-none">بلاغ جديد</a></li>
-                        <li><a href="./HTML/search.html" class="text-dark text-decoration-none">المفقودين</a></li>
-                        <li><a href="#" class="text-dark text-decoration-none">قصص النجاح</a></li>
-                        <li><a href="#" class="text-dark text-decoration-none">تواصل معنا</a></li>
+                <!-- روابط مهمة -->
+                <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 footer-links">
+                    <h4 class="fw-bold mb-3" style="color:#43d9a0; letter-spacing: 1.2px;">روابط مهمة</h4>
+                    <ul class="list-unstyled">
+                        <li class="mb-3">
+                            <a href="#head" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-home me-3"></i> الرئيسية
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="./HTML/aboutUs.html" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-info-circle me-3"></i> من نحن
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="#" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-cogs me-3"></i> الخدمات
+                            </a>
+                        </li>
+                        <li class="mb-3">
+                            <a href="./HTML/contact.html" class="text-white text-decoration-none d-flex align-items-center">
+                                <i class="fas fa-envelope me-3"></i> اتصل بنا
+                            </a>
+                        </li>
                     </ul>
                 </div>
 
-                <!-- سياسة الموقع -->
-                <div class="col-md-3">
-                    <h5 class="fw-bold mb-3">سياسة الموقع</h5>
-                    <ul class="list-unstyled small">
-                        <li><a href="#" class="text-dark text-decoration-none">الشروط والأحكام</a></li>
-                        <li><a href="#" class="text-dark text-decoration-none">سياسة الخصوصية</a></li>
-                        <li><a href="#" class="text-dark text-decoration-none">سياسة النشر</a></li>
-                        <li><a href="#" class="text-dark text-decoration-none">الأسئلة الشائعة</a></li>
-                    </ul>
+                <!-- تواصل معنا -->
+                <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 footer-contact">
+                    <h4 class="fw-bold mb-3" style="color:#43d9a0; letter-spacing: 1.2px;">تواصل معنا</h4>
+                    <p><i class="fas fa-home me-3"></i> القاهرة، مصر</p>
+                    <p><i class="fas fa-envelope me-3"></i> info@tayeh.com</p>
+                    <p><i class="fas fa-phone me-3"></i> +20 123 456 7890</p>
+                    <p><i class="fas fa-print me-3"></i> +20 123 456 7891</p>
                 </div>
 
-                <!-- اتصل بنا -->
-                <div class="col-md-3">
-                    <h5 class="fw-bold mb-3">اتصل بنا</h5>
-                    <ul class="list-unstyled small">
-                        <li><i class="bi bi-geo-alt-fill me-2 text-success"></i> القاهرة، مصر</li>
-                        <li><i class="bi bi-envelope-fill me-2 text-success"></i> support@taeh.com</li>
-                    </ul>
+                <!-- القسم الرابع: تابعنا -->
+                <!-- تابعنا - تحديث -->
+                <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
+                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color:#43d9a0;">تابعنا</h5>
+                    <p>لا تفوت جديدنا! تابعنا على منصات التواصل الاجتماعي للحصول على آخر الأخبار والعروض الخاصة.</p>
+                    <div class="d-flex gap-3 mt-3">
+                        <a href="#" class="btn btn-outline-light btn-floating" role="button" aria-label="Facebook"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating" role="button" aria-label="Twitter"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating" role="button" aria-label="Instagram"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#" class="btn btn-outline-light btn-floating" role="button" aria-label="LinkedIn"><i
+                                class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
 
             </div>
-            <hr class="my-4" />
-            <div class="text-center small text-muted">
-                جميع الحقوق محفوظة © تايه 2025
+
+            <hr class="mb-4" style="border-color:#43d9a0;">
+
+            <div class="row align-items-center">
+                <div class="col-md-12 text-center">
+                    <p>© 2025 جميع الحقوق محفوظة لموقع تائه</p>
+                </div>
             </div>
         </div>
     </footer>
 
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="./JS/Mainscript.js"></script>
 </body>
 
 </html>
