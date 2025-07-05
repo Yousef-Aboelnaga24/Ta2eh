@@ -2,11 +2,19 @@ function buttonDetails() {
   let person = JSON.parse(localStorage.getItem("selectedPerson"));
   let listDetails = document.getElementById("detailsContainer");
 
+  let storedate = localStorage.getItem('reportDate')
+  let missingDate = ''
+  if (storedate) {
+    let reportDate = new Date(storedate)
+    let option = {year: 'numeric', month: 'long', day:'numeric'}
+    missingDate = reportDate.toLocaleDateString('ar-EG', option)
+  }
+
   listDetails.innerHTML = "";
   let cardDetails = `<div class="card p-4">
       <div class="row">
         <div class="col-md-4">
-          <div class="info-box text-center">
+          <div class="info-box bg-success-subtle text-center">
             <img src="${person.img}" alt="صورة المفقود" class="img-fluid">
           </div>
         </div>
@@ -28,7 +36,7 @@ function buttonDetails() {
               <span>${person.phone}</span>
             </p>
             <p><strong>تم الإبلاغ في:</strong>
-              <span>26 مايو 2025</span>
+              <span>${missingDate}</span>
               </p>
           </div>
         </div>
