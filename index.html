@@ -4,19 +4,21 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="keywords" content="تايه">
-    <meta name="keywords" content="تائه">
-    <meta name="keywords" content="منصة المفقودين">
+    <meta name="keywords" content="تايه, تائه, منصة المفقودين, الأطفال المفقودين, كبار السن التائهين">
+    <meta name="description"
+        content="تائه - منصة إنسانية تساعد في الإبلاغ والبحث عن الأطفال المفقودين وكبار السن التائهين بكل سهولة وسرعة.">
     <title>تائه - منصة المفقودين</title>
     <!-- Bootstrap -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.rtl.min.css" />
     <!-- FontAwesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="./CSS/mainStyle.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./CSS/style.css" />
     <link rel="stylesheet" href="./CSS/forAll.css">
 </head>
 
 <body>
+    <!-- Header -->
     <header id="head">
         <!-- Navbar -->
         <nav class="navbar navbar-expand-lg fixed-top">
@@ -25,7 +27,7 @@
                     <img src="./Image/logo.png" alt="شعار" class="logo" />
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navContent"
-                    aria-label="Navegation Toggler">
+                    aria-label="Navigation Toggler">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navContent">
@@ -37,7 +39,7 @@
                             </a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="./HTML/add.html">
+                            <a class="nav-link" href="./HTML/report.html">
                                 <i class="fas fa-exclamation-circle"></i>
                                 بلاغ جديد
                             </a>
@@ -65,14 +67,14 @@
             </div>
         </nav>
 
-        <!-- ✅ Hero Section -->
+        <!-- Hero Section -->
         <section class="hero-section">
-            <div class="container hero-content text-center text-white">
-                <h1 class="text-white fw-bold display-5 mb-3">مرحباً بك في منصة "تائه"</h1>
+            <div class="container hero-content text-white">
+                <h1 class="hero-title text-white fw-bold display-4 mb-3">
+                    مرحباً بك في منصة <span class="brand">"تائه"</span>
+                </h1>
                 <p class="fs-5">منصة إنسانية تساعدك في الإبلاغ والبحث عن الأطفال المفقودين وكبار السن التائهين بكل سهولة
                     وسرعة.</p>
-
-                <!-- البديل المقترح -->
                 <p class="fs-5 mt-3">🚨 عدد البلاغات <span class="fw-bold" id="countMissing">0</span> بلاغ حتى الآن عبر
                     المنصة.</p>
                 <div class="d-flex justify-content-center gap-3 mt-3">
@@ -81,32 +83,97 @@
                 </div>
             </div>
         </section>
-
     </header>
-    <!-- ✅ بلاغ جديد -->
-    <section id="report-section" class="py-5 bg-light">
-        <div class="container">
-            <div class="row align-items-center g-4">
 
-                <!-- ✅ صورة توضيحية -->
+    <!-- ✅ بلاغ جديد -->
+    <section id="report-section" class="py-5 bg-light ">
+        <div class="container">
+            <div class="row align-items-center g-5">
+
                 <div class="col-md-6 text-center">
-                    <img src="./Image/cute bunny.jpeg" alt="تبليغ عن مفقود" class="img-fluid rounded-4 shadow"
-                        style="max-height: 350px;">
+                    <div class="position-relative">
+                        <img src="./Image/cute bunny.jpeg" alt="تبليغ عن مفقود"
+                            class="img-fluid rounded-4 shadow-lg border border-3 border-white"
+                            style="max-height: 380px; object-fit: cover;" />
+                        <span
+                            class="position-absolute top-0 start-50 translate-middle badge rounded-pill bg-danger px-3 py-2 shadow">
+                            عاجل
+                        </span>
+                    </div>
                 </div>
 
-                <!-- ✅ نص محفز وزر -->
                 <div class="col-md-6 text-center text-md-start">
-                    <h2 class="fw-bold mb-3 text-success">هل رأيت شخصاً تائهاً؟</h2>
-                    <p class="mb-4 fs-5 text-muted">
-                        ساهم في إعادة المفقودين إلى أسرهم. كل معلومة قد تصنع الفارق.
+                    <h2 class="fw-bold mb-3 text-success display-6">
+                        هل رأيت شخصاً تائهاً؟
+                    </h2>
+                    <p class="mb-4 fs-5 text-muted lh-lg">
+                        ساهم في إعادة المفقودين إلى أسرهم.
+                        <span class="fw-semibold text-dark">كل معلومة قد تصنع الفارق.</span>
                         شارك ببلاغك الآن وساعد في إنقاذ حياة.
                     </p>
-                    <a href="./HTML/add.html" class="btn btn-success btn-lg px-4 py-2 rounded-pill">
+                    <a href="./HTML/report.html"
+                        class="btn btn-success btn-lg px-5 py-3 rounded-pill shadow-sm d-inline-flex align-items-center gap-2">
+                        <i class="fas fa-bullhorn"></i>
                         قدّم بلاغ الآن
-                        <i class="fas fa-external-link-alt ms-2"></i>
                     </a>
                 </div>
 
+            </div>
+        </div>
+    </section>
+
+
+    <!-- ✅ Timeline Section -->
+    <section class="timeline-section py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center fw-bold mb-5 text-success">
+                كيف تعمل منصة <span class="brand">تائه</span>؟
+            </h2>
+
+            <div class="row justify-content-center">
+                <!-- Step 1 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                        <div class="fs-1 text-success mb-3">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h5 class="fw-bold">قدّم بلاغ</h5>
+                        <p class="text-muted">أدخل بيانات الشخص المفقود عبر المنصة.</p>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                        <div class="fs-1 text-success mb-3">
+                            <i class="fas fa-search"></i>
+                        </div>
+                        <h5 class="fw-bold">المراجعة</h5>
+                        <p class="text-muted">يتم التحقق من صحة البلاغ ومراجعته.</p>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                        <div class="fs-1 text-success mb-3">
+                            <i class="fas fa-bullhorn"></i>
+                        </div>
+                        <h5 class="fw-bold">النشر</h5>
+                        <p class="text-muted">يُعرض البلاغ على صفحة المفقودين.</p>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="col-md-3 text-center mb-4">
+                    <div class="p-4 bg-white rounded-4 shadow-sm h-100">
+                        <div class="fs-1 text-success mb-3">
+                            <i class="fas fa-handshake"></i>
+                        </div>
+                        <h5 class="fw-bold">التواصل</h5>
+                        <p class="text-muted">يمكن التواصل مع ذوي المفقود عند إيجاد أي معلومات.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -120,32 +187,29 @@
 
             <div id="lastMissing" class="row g-4">
 
-                <div class="text-center mt-5">
-                    <a href="./HTML/missing.html" class="btn btn-success btn-lg px-5 rounded-pill">
-                        <i class="fas fa-list-ul me-1"></i> الذهاب إلى قائمة المفقودين
-                    </a>
-                </div>
+            </div>
+            <div class="text-center mt-5">
+                <a href="./HTML/missing.html" class="btn btn-success btn-lg px-5 rounded-pill">
+                    <i class="fas fa-list-ul me-1"></i> الذهاب إلى قائمة المفقودين
+                </a>
             </div>
     </section>
 
     <!-- Footer -->
-    <footer class="text-white pt-5 pb-4" style="background-color:#074c3a;"> <!-- خلفية أغمق -->
+    <footer class="text-white pt-5 pb-4" style="background-color:#074c3a;">
         <div class="container text-md-start">
             <div class="row text-md-start">
-
                 <!-- القسم الأول: نبذة عن الموقع -->
                 <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-                    <h4 class="fw-bold mb-3" style="color:#43d9a0; letter-spacing: 1.2px;">تائه</h4>
-                    <p style="color:#d4f0e2; font-size: 15px; line-height: 1.6; max-width: 320px;">
-                        "تائه" هو موقع يهتم بمساعدتك على إيجاد طريقك بين بحر المعلومات الضخم.
-                        نوفّر لك محتوى دقيق، واضح، ومصمم خصيصاً ليجعل تجربتك أسهل وأفضل.
-                        انضم لنا واكتشف كيف يمكنك أن تكون دائماً على الطريق الصحيح.
+                    <h4 class="fw-bold mb-3">تائه</h4>
+                    <p style="color:#d4f0e2; font-size: 15px; line-height: 1.6; max-width: 320px">
+                        "تائه" هي منصة إنسانية لمساعدة الأهالي في العثور على أطفالهم وكبار السن المفقودين
                     </p>
                 </div>
 
                 <!-- روابط مهمة -->
                 <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3 footer-links">
-                    <h4 class="fw-bold mb-3" style="color:#43d9a0; letter-spacing: 1.2px;">روابط مهمة</h4>
+                    <h4 class="fw-bold mb-3">روابط مهمة</h4>
                     <ul class="list-unstyled">
                         <li class="mb-3">
                             <a href="#head" class="text-white text-decoration-none d-flex align-items-center">
@@ -175,7 +239,7 @@
 
                 <!-- تواصل معنا -->
                 <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3 footer-contact">
-                    <h4 class="fw-bold mb-3" style="color:#43d9a0; letter-spacing: 1.2px;">تواصل معنا</h4>
+                    <h4 class="fw-bold mb-3">تواصل معنا</h4>
                     <p><i class="fas fa-home me-3"></i> القاهرة، مصر</p>
                     <p><i class="fas fa-envelope me-3"></i> info@tayeh.com</p>
                     <p><i class="fas fa-phone me-3"></i> +20 123 456 7890</p>
@@ -183,7 +247,7 @@
 
                 <!-- تابعنا - تحديث -->
                 <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mt-3">
-                    <h5 class="text-uppercase mb-4 font-weight-bold" style="color:#43d9a0;">تابعنا</h5>
+                    <h4 class="text-uppercase mb-4 fw-bold">تابعنا</h4>
                     <p>لا تفوت جديدنا! تابعنا على منصات التواصل الاجتماعي للحصول على آخر الأخبار.</p>
                     <div class="d-flex gap-3 mt-3">
                         <a href="#" class="btn btn-outline-light btn-floating" role="button" aria-label="Facebook"><i
@@ -206,7 +270,7 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="./JS/Mainscript.js"></script>
+    <script src="./JavaScript/script.js"></script>
 </body>
 
 </html>
