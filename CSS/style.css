@@ -1,3 +1,9 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 :root {
   --primary-color: #09906f;
   --secondary-color: #43d9a0;
@@ -68,15 +74,6 @@ header {
   color: #333;
 }
 
-.transition {
-  transition: all 0.3s ease;
-}
-
-.transition:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
-}
-
 .success-card img {
   width: 100%;
   height: 200px;
@@ -94,4 +91,43 @@ footer h4 {
   text-decoration: underline;
   cursor: pointer;
   transition: color 0.3s ease;
+}
+
+@media (max-width: 576px) {
+
+  /* العنوان */
+  .hero-title {
+    font-size: 1.8rem;
+    text-align: center;
+  }
+
+  /* النصوص */
+  .hero-content {
+    max-width: 100%;
+    text-align: center;
+    padding: 0 10px;
+  }
+
+  .hero-content p {
+    font-size: 0.9rem;
+  }
+
+  /* الأزرار */
+  .btn-success {
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 8px 16px !important;
+  }
+
+  .btn-outline-light {
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 6px 12px !important;
+  }
+
+  /* الصور */
+  img {
+    max-width: 100%;
+    height: auto;
+  }
 }
