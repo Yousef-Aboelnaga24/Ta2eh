@@ -64,30 +64,30 @@
   <section>
     <div class="container mt-5 mb-5">
       <h2 class="text-center mb-4 text-main fw-bold">تقديم بلاغ مفقود</h2>
-      <form id="reportForm" class="bg-white p-4 shadow rounded w-75 m-auto">
+      <form id="reportForm" class="bg-white p-4 shadow w-75 rounded m-auto">
         <!-- صورة الشخص -->
         <div class="mb-3">
-          <label for="personImage" class="form-label">📷 ارفع صورة للشخص</label>
+          <label for="personImage" class="form-label">ارفع صورة للشخص</label>
           <input type="file" class="form-control" id="personImage" name="personImage" accept="image/*">
         </div>
 
         <!-- الاسم -->
         <div class="mb-3">
-          <label for="personName" class="form-label">👤 اسم الشخص</label>
+          <label for="personName" class="form-label">اسم الشخص</label>
           <input type="text" class="form-control" id="personName" name="personName" onkeyup="letterOnly(this)"
             placeholder="ادخل اسم الشخص">
         </div>
 
         <!-- العمر -->
         <div class="mb-3">
-          <label for="age" class="form-label">🎂 العمر</label>
+          <label for="age" class="form-label">العمر</label>
           <input type="number" class="form-control" id="age" name="age" onkeyup="numberOnly(this)"
-            placeholder="ادخل عمر الشخص">
+            placeholder="ادخل عمر الشخص"  min="1" max="120">
         </div>
 
         <!-- المحافظة -->
         <div class="mb-3">
-          <label for="governorate" class="form-label">📍 المحافظة</label>
+          <label for="governorate" class="form-label">المحافظة</label>
           <input type="text" class="form-control" name="" id="governorateInp" onkeyup="letterOnly(this)"
             list="governorate" placeholder="اختر المحافظة">
           <datalist id="governorate">
@@ -123,28 +123,28 @@
 
         <!-- آخر مكان شوهد فيه -->
         <div class="mb-3">
-          <label for="lastSeen" class="form-label">📌 آخر مكان شوهد فيه</label>
+          <label for="lastSeen" class="form-label">آخر مكان شوهد فيه</label>
           <input type="text" class="form-control" id="lastSeen" name="lastSeen" onkeyup="letterOnly(this)"
             placeholder="مثال: محطة رمسيس - القاهرة">
         </div>
 
         <!-- تفاصيل إضافية -->
         <div class="mb-3">
-          <label for="details" class="form-label">📝 تفاصيل إضافية</label>
+          <label for="details" class="form-label">تفاصيل إضافية</label>
           <textarea class="form-control" id="details" name="details" rows="3" onkeyup="letterOnly(this)"
             placeholder="ملابس، وقت الفقد، ملاحظات..."></textarea>
         </div>
 
         <!-- رقم الهاتف -->
         <div class="mb-3">
-          <label for="phoneNumber" class="form-label">📞 رقم الهاتف للتواصل</label>
+          <label for="phoneNumber" class="form-label">رقم الهاتف للتواصل</label>
           <input type="tel" class="form-control" id="phoneNumber" name="phoneNumber" onkeyup="numberOnly(this)"
             placeholder="01XXXXXXXXX">
         </div>
 
         <!-- اسم المبلغ -->
         <div class="mb-4">
-          <label for="reporterName" class="form-label">✍️ اسم المُبلغ</label>
+          <label for="reporterName" class="form-label">اسم المُبلغ</label>
           <input type="text" class="form-control" id="reporterName" name="reporterName" onkeyup="letterOnly(this)"
             placeholder="ادخل اسمك">
         </div>
@@ -152,7 +152,7 @@
         <!-- زر الإرسال -->
         <div class="d-grid">
           <button type="submit" id="btn-main" class="btn btn-main" aria-label="إرسال البلاغ">
-            🚨 إرسال البلاغ
+            إرسال البلاغ
           </button>
 
         </div>

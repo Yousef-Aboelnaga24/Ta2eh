@@ -8,11 +8,6 @@ body {
 
 #reportForm {
   background: #fff;
-  border-radius: 15px;
-  padding: 2rem;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-  margin-top: 80px;
-  margin-bottom: 40px;
 }
 
 .form-control {
@@ -40,4 +35,10 @@ body {
 .btn-main:hover {
   background: linear-gradient(135deg, #077d60, #09906F);
   transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+  #reportForm {
+    width: 100%;
+  }
 }
