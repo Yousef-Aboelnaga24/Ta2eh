@@ -57,12 +57,10 @@ header {
 
 .missing-card img {
   object-fit: cover;
-  border-radius: 50%;
   width: 200px;
   height: 200px;
   display: block;
   margin: 5px auto;
-  border: 4px solid #198754;
 }
 
 .missing-card .card-title {
@@ -123,11 +121,5 @@ footer h4 {
     margin-bottom: 10px;
     font-size: 16px;
     padding: 6px 12px !important;
-  }
-
-  /* الصور */
-  img {
-    max-width: 100%;
-    height: auto;
   }
 }
