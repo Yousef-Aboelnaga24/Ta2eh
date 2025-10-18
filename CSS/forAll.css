@@ -24,8 +24,8 @@ body {
 }
 
 .logo {
-    height: 60px;
-    width: auto;
+    width: 4rem;
+    height: auto;
     border-radius: 50%;
     object-fit: cover;
 }
