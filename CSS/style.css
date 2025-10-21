@@ -5,7 +5,7 @@
 
 /* Header */
 header {
-  background: linear-gradient(90deg, #00000069, #00000056), url('../Image/hero-bg.png') no-repeat center center/cover fixed;
+  background: linear-gradient(90deg, #00000069, #00000056), url('../Image/hero-bg.png') no-repeat center center/cover;
   height: 100vh;
 }
 
@@ -113,4 +113,5 @@ footer h3,h2 {
     font-size: 16px;
     padding: 6px 12px !important;
   }
+
 }
