@@ -1,0 +1,44 @@
+body {
+  background-color: #f8f9fa;
+}
+
+.text-main {
+  color: #09906F;
+}
+
+#reportForm {
+  background: #fff;
+}
+
+.form-control {
+  border: 2px solid #e6e6e6;
+  border-radius: 8px;
+  padding: 10px;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus {
+  border-color: #09906F;
+}
+
+.btn-main {
+  background: linear-gradient(135deg, #09906F, #0aa380);
+  color: #fff !important;
+  font-weight: bold;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 1.1rem;
+  box-shadow: 0 4px 10px rgba(9, 144, 111, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-main:hover {
+  background: linear-gradient(135deg, #077d60, #09906F);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 576px) {
+  #reportForm {
+    width: 100% !important;
+  }
+}
