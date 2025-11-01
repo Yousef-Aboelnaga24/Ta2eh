@@ -72,7 +72,7 @@
                 <div class="col-md-7" data-aos="fade-up">
                     <div class="card border-0 shadow-sm p-4">
                         <h5 class="mb-4 fw-bold text-center">أرسل لنا رسالة</h5>
-                        <form onsubmit="showConfirmation(event)">
+                        <form onsubmit="showConfirmation(event)" method="post">
                             <div class="form-floating mb-3">
                                 <input type="text" class="form-control" id="name" placeholder="الاسم" required>
                                 <label for="name">الاسم</label>
@@ -87,7 +87,7 @@
                                     required></textarea>
                                 <label for="message">رسالتك</label>
                             </div>
-                            <div class="text-end">
+                            <div class="">
                                 <button type="submit" class="btn btn-success px-4 rounded-pill">
                                     إرسال <i class="fas fa-paper-plane ms-2"></i>
                                 </button>

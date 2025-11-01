@@ -71,7 +71,8 @@ header {
   border-top-right-radius: 12px;
 }
 
-footer h3,h2 {
+footer h3,
+h2 {
   color: var(--secondary-color);
 }
 

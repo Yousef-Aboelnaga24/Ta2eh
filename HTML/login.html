@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,25 +11,30 @@
       background: linear-gradient(to right, #09906F, #38b99d);
       font-family: "Cairo", sans-serif;
     }
+
     .card {
       border: none;
       border-radius: 1rem;
     }
+
     .form-control:focus {
       box-shadow: none;
       border-color: #09906F;
     }
+
     .btn-main {
       background-color: #09906F;
       color: #fff;
     }
+
     .btn-main:hover {
       background-color: #077d5f;
     }
   </style>
   <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600&display=swap" rel="stylesheet">
 </head>
-<body class="d-flex align-items-center justify-content-center" style="height:100vh;">
+
+<body class="d-flex align-items-center justify-content-center vh-100">
 
   <div class="container">
     <div class="row justify-content-center">
@@ -37,14 +43,14 @@
           <div class="card-body p-4">
             <h3 class="text-center mb-4 fw-bold">تسجيل الدخول</h3>
 
-            <form>
+            <form id="loginForm" method="post" novalidate>
               <div class="mb-3">
                 <label class="form-label">البريد الإلكتروني</label>
-                <input type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
+                <input id="email" type="email" class="form-control" placeholder="أدخل بريدك الإلكتروني" required>
               </div>
               <div class="mb-3">
                 <label class="form-label">كلمة المرور</label>
-                <input type="password" class="form-control" placeholder="أدخل كلمة المرور" required>
+                <input id="password" type="password" class="form-control" placeholder="أدخل كلمة المرور" required>
               </div>
               <button type="submit" class="btn btn-main w-100">تسجيل الدخول</button>
             </form>
@@ -57,6 +63,52 @@
       </div>
     </div>
   </div>
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script>
+    const form = document.getElementById('loginForm');
+    const email = document.getElementById('email');
+    const password = document.getElementById('password');
+
+    function isValidEmail(e) {
+      const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+      return re.test(String(e).toLowerCase());
+    }
+
+    form.addEventListener('submit', function (e) {
+      e.preventDefault();
+
+      const emailVal = email.value.trim();
+      const passVal = password.value.trim();
+
+      if (!emailVal || !passVal) {
+        Swal.fire({
+          icon: 'error',
+          title: 'خطأ في الإدخال',
+          text: 'من فضلك أدخل البريد الإلكتروني وكلمة المرور.',
+          confirmButtonText: 'حسناً'
+        });
+        return;
+      }
+      if (!isValidEmail(emailVal)) {
+        Swal.fire({
+          icon: 'error',
+          title: 'بريد غير صالح',
+          text: 'من فضلك أدخل بريد إلكتروني صحيح.',
+          confirmButtonText: 'حسناً'
+        });
+        return;
+      }
+      Swal.fire({
+        icon: 'success',
+        title: 'تم تسجيل الدخول بنجاح',
+        text: 'مرحباً بعودتك!',
+        confirmButtonText: 'متابعة'
+      }).then(() => {
+        form.reset();
+      });
+    });
+  </script>
 
 </body>
+
 </html>

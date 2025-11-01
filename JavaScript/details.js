@@ -1,18 +1,16 @@
-function buttonDetails() {
+window.addEventListener("load", () => {
   let person = JSON.parse(localStorage.getItem("selectedPerson"));
   let listDetailsOne = document.getElementById("detailsContainer");
-  // let listDetailsTwo = document.getElementById("lastMissing");
 
-  let storedate = localStorage.getItem('reportDate')
-  let missingDate = ''
+  let storedate = localStorage.getItem("reportDate");
+  let missingDate = "";
   if (storedate) {
-    let reportDate = new Date(storedate)
-    let option = {year: 'numeric', month: 'long', day:'numeric'}
-    missingDate = reportDate.toLocaleDateString('ar-EG', option)
+    let reportDate = new Date(storedate);
+    let option = { year: "numeric", month: "long", day: "numeric" };
+    missingDate = reportDate.toLocaleDateString("ar-EG", option);
   }
 
   listDetailsOne.innerHTML = "";
-  // listDetailsTwo.innerHTML = "";
   let cardDetails = `<div class="card p-4">
       <div class="row">
         <div class="col-md-4">
@@ -45,6 +43,4 @@ function buttonDetails() {
       </div>
     </div>`;
   listDetailsOne.innerHTML += cardDetails;
-  // listDetailsTwo.innerHTML += cardDetails;
-}
-window.onload = buttonDetails;
+});

@@ -75,7 +75,7 @@ searchInput.addEventListener("keyup", () => {
   cards.forEach((card) => {
     let title = card.querySelector(".card-title");
     let textValue = title.textContent || title.innerText;
-
+ 
     if (textValue.includes(searchValue)) {
       card.parentElement.style.display = ""; // parentElement = col-md-3
     } else {

@@ -28,4 +28,32 @@ body {
     height: auto;
     border-radius: 50%;
     object-fit: cover;
+    transition: all .3s ease;
+    animation: up 1.7s ease infinite;
+}
+
+@keyframes up {
+    0% {
+        transform: translateY(-5px);
+    }
+    50% {
+        transform: translateY(5px);
+    }
+    100% {
+        transform: translateY(-5px);
+    }
+}
+
+.btn-success {
+    background-color: #09906f;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+    color: #fff;
+}
+
+.btn-success:hover {
+    background-color: #0bb88b;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
 }

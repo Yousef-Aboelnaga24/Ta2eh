@@ -116,7 +116,7 @@ buttonMain.addEventListener("click", (e) => {
     lastSeen: lastSeen,
     details: details,
     reporter: reporter,
-    reportDate: new Date().toISOString(),
+    reportDate: new Date().toISOString()
   };
 
   let persons = JSON.parse(localStorage.getItem("persons")) || [];

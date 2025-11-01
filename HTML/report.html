@@ -25,7 +25,7 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg bg-success">
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="../Image/logo.png" alt="logo" class="logo"></a>
+      <a class="navbar-brand" href="../index.html"><img src="../Image/logo.png" alt="logo" class="logo"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -64,17 +64,18 @@
   <section>
     <div class="container mt-5 mb-5">
       <h2 class="text-center mb-4 text-main fw-bold">تقديم بلاغ مفقود</h2>
-      <form id="reportForm" class="bg-white p-4 shadow-lg w-75  rounded m-auto">
+      <form id="reportForm" method="post" enctype="multipart/form-data"
+        class="bg-white p-4 shadow-lg w-75  rounded m-auto">
         <!-- صورة الشخص -->
         <div class="mb-3">
           <label for="personImage" class="form-label">ارفع صورة للشخص</label>
-          <input type="file" class="form-control" id="personImage" name="personImage" accept="image/*" required>
+          <input type="file" class="form-control" id="personImage" name="image" accept="image/*" required>
         </div>
 
         <!-- الاسم -->
         <div class="mb-3">
           <label for="personName" class="form-label">اسم الشخص</label>
-          <input type="text" class="form-control" id="personName" name="personName" onkeyup="letterOnly(this)"
+          <input type="text" class="form-control" id="personName" name="name" onkeyup="letterOnly(this)"
             placeholder="ادخل اسم الشخص" required>
         </div>
 
