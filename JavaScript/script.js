@@ -45,27 +45,27 @@ document.querySelectorAll(".btn-detail").forEach((btn) => {
   });
 });
 
-document.addEventListener("contextmenu", (e) => {
-  e.preventDefault();
-});
+// document.addEventListener("contextmenu", (e) => {
+//   e.preventDefault();
+// });
 
-document.addEventListener("dragstart", (e) => {
-  e.preventDefault();
-});
+// document.addEventListener("dragstart", (e) => {
+//   e.preventDefault();
+// });
 
-document.addEventListener("selectstart", (e) => {
-  e.preventDefault();
-});
+// document.addEventListener("selectstart", (e) => {
+//   e.preventDefault();
+// });
 
-document.addEventListener("keydown", (e) => {
-  if (
-    e.key &&
-    (e.ctrlKey === "c" || e.key === "v" || e.key === "u" || e.key === "w")
-  ) {
-    e.preventDefault();
-  }
+// document.addEventListener("keydown", (e) => {
+//   if (
+//     e.key &&
+//     (e.ctrlKey === "c" || e.key === "v" || e.key === "u" || e.key === "w")
+//   ) {
+//     e.preventDefault();
+//   }
 
-  if (e.keyCode === 123) {
-    e.preventDefault();
-  }
-});
+//   if (e.keyCode === 123) {
+//     e.preventDefault();
+//   }
+// });

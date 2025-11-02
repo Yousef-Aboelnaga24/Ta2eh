@@ -1,26 +1,26 @@
-html,
-body {
+body,
+html {
     max-width: 100%;
-    overflow-x: hidden;
+    overflow-x: hidden
 }
 
 .navbar {
     background: linear-gradient(90deg, #0c8e70, #0aa380, #0aa380);
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .25);
     backdrop-filter: blur(10px);
-    margin: 0 !important;
+    margin: 0 !important
 }
 
 .nav-link {
-    color: white !important;
+    color: #fff !important;
     font-weight: 500;
-    padding: 5px 10px;
+    padding: 5px 10px
 }
 
 .nav-link:hover {
     background: #00000055;
     border-radius: 8px;
-    transition: all 0.3s ease;
+    transition: all .3s ease
 }
 
 .logo {
@@ -29,31 +29,33 @@ body {
     border-radius: 50%;
     object-fit: cover;
     transition: all .3s ease;
-    animation: up 1.7s ease infinite;
+    animation: up 1.7s ease infinite
 }
 
 @keyframes up {
     0% {
-        transform: translateY(-5px);
+        transform: translateY(-5px)
     }
+
     50% {
-        transform: translateY(5px);
+        transform: translateY(5px)
     }
+
     100% {
-        transform: translateY(-5px);
+        transform: translateY(-5px)
     }
 }
 
 .btn-success {
-    background-color: #09906f;
+    background-color: #09906f ;
     border: none;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
-    color: #fff;
+    transition: all .3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, .35);
+    color: #fff
 }
 
 .btn-success:hover {
     background-color: #0bb88b;
     transform: scale(1.05);
-    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.45);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, .45)
 }
