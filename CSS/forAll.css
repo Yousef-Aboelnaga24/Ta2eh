@@ -47,7 +47,7 @@ html {
 }
 
 .btn-success {
-    background-color: #09906f ;
+    background-color: #04672F !important;
     border: none;
     transition: all .3s ease;
     box-shadow: 0 4px 12px rgba(0, 0, 0, .35);
@@ -55,7 +55,6 @@ html {
 }
 
 .btn-success:hover {
-    background-color: #0bb88b;
-    transform: scale(1.05);
+    transform: scale(1.01,1.01);
     box-shadow: 0 6px 16px rgba(0, 0, 0, .45)
 }
